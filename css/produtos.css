@@ -1,0 +1,108 @@
+main {
+    grid-area: main;
+    padding: 1rem;
+}
+
+main section h2 {
+    color: var(--cor-texto);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+}
+
+main .produtos ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main .produtos .produto {
+    max-width: 368px;
+    border-radius: 14px;
+}
+
+main .produtos img {
+    width: 100%;
+    height: 334px;
+    border-radius: 14px 14px 0 0;
+    display: block;
+    object-position: center;
+    object-fit: cover;
+}
+
+main .produtos figcaption {
+    background-color: var(--cor-fundo-produtos);
+    color: var(--cor-texto);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding: 1.5rem 1.5rem 1.2rem;
+}
+
+main .informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: var(--cor-fundo-produtos);
+    color: var(--cor-texto);
+    padding: 0 1.5rem 1.5rem;
+}
+
+main .informacoes span {
+    color: var(--cor-informacoes);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+main .informacoes strong {
+    color: var(--cor-informacoes);
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+}
+
+main .informacoes .preco {
+    font-size: 2rem;
+    margin-top: 1rem;
+    text-align: right;
+    color: var(--cor-texto);
+}
+
+main .informacoes .adicionar-ao-carrinho {
+    margin-top: 0.5rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    border: 0;
+    border-radius: 8px;
+    padding: 1rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+main .informacoes .adicionar-ao-carrinho:hover {
+    background-color: var(--cor-hover);
+}
+
+@media(min-width: 769px) {
+    main .produtos ul {
+        margin: 0 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    main .produtos .produto {
+        /* width: calc((100% / 2) - 1rem); */
+        min-width: 368px;
+    }
+    
+}
+
+@media(min-width: 1170px) {
+    main section {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+}

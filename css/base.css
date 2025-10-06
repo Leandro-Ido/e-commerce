@@ -3,8 +3,10 @@
 :root {
     --cor-texto: #ffffff;
     --cor-fundo: #111111;
+    --cor-fundo-produtos: #29272a;
     --cor-hover: #834de8;
     --cor-primaria: #6528d3;
+    --cor-informacoes: #ededed;
 }
 body {
     font-family: 'Roboto', sans-serif;
