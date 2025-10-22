@@ -47,6 +47,7 @@ main .informacoes {
     background-color: var(--cor-fundo-produtos);
     color: var(--cor-texto);
     padding: 0 1.5rem 1.5rem;
+    border-radius: 0 0 14px 14px;
 }
 
 main .informacoes span {
@@ -76,6 +77,7 @@ main .informacoes .adicionar-ao-carrinho {
     border: 0;
     border-radius: 8px;
     padding: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
