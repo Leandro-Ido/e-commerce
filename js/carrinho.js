@@ -18,18 +18,13 @@ Objetivo 3 - atualizar valores do carrinho:
 const botoesAdicionarAoCarrinho = document.querySelectorAll('.adicionar-ao-carrinho');
 
 botoesAdicionarAoCarrinho.forEach(botao => {
-    botao.addEventListener('click', function() {
-        const produtoId = this.dataset.produtoId;
-        const produtoNome = this.dataset.produtoNome;
-        const produtoPreco = parseFloat(this.dataset.produtoPreco);
+    botao.addEventListener('click', (evento) => {
+        const elementoProduto = evento.target.closest('.produto');
+        const produtoId = elementoProduto.dataset.id;
+        const produtoNome = elementoProduto.querySelector('.nome').textContent;
+        const produtoImagem = elementoProduto.querySelector('img').getAttribute('src');
+        const produtoPreco = parseFloat(elementoProduto.querySelector('.preco').textContent.replace('R$ ', '').replace('.', '').replace(',', '.'));
 
-        // Atualizar o contador de itens no carrinho
-        atualizarContadorCarrinho();
-
-        // Adicionar o produto ao localStorage
-        adicionarProdutoAoCarrinho(produtoId, produtoNome, produtoPreco);
-
-        // Atualizar a tabela HTML do carrinho
-        atualizarTabelaCarrinho();
+        console.log(produtoPreco);
     });
 });
